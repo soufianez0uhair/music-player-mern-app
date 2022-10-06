@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../components/Loader";
 import Track from "../components/Track";
 import { selectAllFavorites, getStatusFavorites, getErrorFavorites, fetchFavorites } from "../redux/tracksSlice";
+import { selectUser } from "../redux/authSlice";
 
 const Favorite = () => {
     const dispatch = useDispatch();
@@ -28,11 +29,15 @@ const Favorite = () => {
         tracksEl = favoritesError;
     }
     
+    const user = useSelector(selectUser);
+    
     return (
-        <div className="tracks">
-            {
-                tracksEl
-            }
+        <div className="tracksPage" style={{gridColumn: user ? "2 / 3" : "1 / 3"}} >
+            <div className="tracks" >
+                {
+                    tracksEl
+                }
+            </div>
         </div>
     )
 }

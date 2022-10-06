@@ -17,7 +17,7 @@ const Track = ({track}) => {
                 <img src={track.cover} alt={track.title + " cover"} className="track__cover" />
             </div>
             <BsFillPlayFill onClick={() => dispatch(setCurrentTrack(track))} className="icon icon--play" />
-            {favTrack ? <AiFillStar style={{display: user ? 'block' : ''}} onClick={() => dispatch(deleteTrackFromFavorites({id: track.id}))} className="icon icon--star" /> : <AiOutlineStar style={{display: user ? 'block' : ''}} onClick={() => dispatch(addFavoriteTrack(track))} className="icon icon--star" />}
+            {user && (favTrack ? <AiFillStar style={{display: user ? 'block' : ''}} onClick={() => dispatch(deleteTrackFromFavorites({id: track.id}))} className="icon icon--star" /> : <AiOutlineStar style={{display: user ? 'block' : ''}} onClick={() => dispatch(addFavoriteTrack(track))} className="icon icon--star" />)}
             <div className="track__details">
                 <h3 className="track__title">{track.title.length < 15 ? track.title : track.title.slice(0,15) + '..'}</h3>
                 <span className="track__artist">{track.artist}</span>

@@ -6,6 +6,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 img {
   width: 100%; }
@@ -70,8 +73,9 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   min-height: 100vh;
+  justify-content: center;
   align-items: flex-start;
-  margin-left: 32rem; }
+  grid-column: 2 / 3; }
 
 .loader {
   width: 30rem; }
@@ -105,12 +109,18 @@ body {
   padding: .5rem 1rem;
   background: #fff;
   gap: 1rem; }
+  @media (max-width: 800px) {
+    .audioPlayer {
+      grid-template-columns: 5rem 1fr; } }
   .audioPlayer__details {
     display: flex;
     flex-direction: column;
     gap: .5rem; }
   .audioPlayer__track {
     height: 5rem; }
+    @media (max-width: 800px) {
+      .audioPlayer__track {
+        grid-column: 1 / 3; } }
 
 .auth {
   min-height: calc(100vh - 10rem);
@@ -120,7 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: .75rem;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  grid-column: 1 / 3; }
   .auth label {
     color: #fff; }
   .auth__input {
@@ -148,6 +159,10 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem; }
+  @media (max-width: 800px) {
+    .header {
+      flex-direction: column;
+      gap: 1.5rem; } }
   .header__link {
     font-weight: 500;
     font-size: 1.5rem;
@@ -155,6 +170,9 @@ body {
     background: #5E548E;
     padding: .5rem 1.5rem;
     margin-left: 1rem; }
+    @media (max-width: 600px) {
+      .header__link {
+        font-size: 1.2rem; } }
     .header__link:hover {
       background: #fff;
       color: #5E548E;
@@ -169,6 +187,9 @@ body {
   align-items: center;
   justify-content: center;
   width: 40rem; }
+  @media (max-width: 600px) {
+    .search {
+      width: 30rem; } }
   .search__input {
     margin-left: -2.5rem;
     padding: 1rem 3rem;
@@ -181,10 +202,20 @@ body {
     .search__input:focus {
       width: 100%; }
 
+.mobile {
+  display: none; }
+  @media (max-width: 800px) {
+    .mobile {
+      display: inline-block; } }
+
 .pages {
-  display: flex;
+  display: grid;
+  grid-template-columns: 25rem 1fr;
   padding: 0 2rem;
   gap: 1.5rem; }
+  @media (max-width: 800px) {
+    .pages {
+      display: block; } }
 
 .menu {
   position: fixed;
@@ -200,6 +231,9 @@ body {
   gap: 2rem;
   font-weight: 300;
   color: #231942; }
+  @media (max-width: 800px) {
+    .menu {
+      display: none; } }
   .menu h1 {
     font-weight: 300;
     font-size: 3rem; }

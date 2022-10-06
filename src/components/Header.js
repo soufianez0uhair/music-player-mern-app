@@ -43,16 +43,19 @@ const Header = () => {
         dispatch(logOut());
         dispatch(deleteAllFavorites())
     }
+
     return (
         <header className="header">
-            <img src={Logo} alt="logo gif" className="logo" />
+            <Link to="/" ><img src={Logo} alt="logo gif" className="logo" /></Link>
             <form onSubmit={(e) => handleSubmit(e)} className="search">
                 <AiOutlineSearch className="icon icon--search" />                
                 <input type="text" placeholder="Search.." value={term} onChange={(e) => handleChange(e)} className="search__input" />
             </form>
             {user ? <div className="header__links">
                     <span className="header__name">Hi, <b>{user.name}</b></span>
-                    <span className="header__link" onClick={() => dispatch(logOut())} >Logout</span>
+                    <Link to="/" className="header__link mobile">Home</Link>
+                    <Link to="/favorite" className="header__link mobile">Favorites</Link>
+                    <span className="header__link" onClick={() => dispatch(handleLogOut())} >Logout</span>
                 </div> : <div className="header__links">
                     <Link to="/login" className="header__link">Login</Link>
                     <Link to="/register" className="header__link">Register</Link>

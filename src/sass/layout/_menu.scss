@@ -12,6 +12,9 @@
     gap: 2rem;
     font-weight: 300;
     color: $russianViolet;
+    @include breakpoints($tablet) {
+        display: none;
+    }
     h1 {
         font-weight: 300;
         font-size: 3rem;

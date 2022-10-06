@@ -8,6 +8,9 @@
     padding: .5rem 1rem;
     background: #fff;
     gap: 1rem;
+    @include breakpoints($tablet) {
+        grid-template-columns: 5rem 1fr;
+    }
     &__details {
         display: flex;
         flex-direction: column;
@@ -15,5 +18,8 @@
     }
     &__track {
         height: 5rem;
+        @include breakpoints($tablet) {
+            grid-column: 1 / 3;
+        }
     }
 }

@@ -1,5 +1,9 @@
 .pages {
-    display: flex;
+    display: grid;
+    grid-template-columns: 25rem 1fr;
     padding: 0 2rem;
     gap: 1.5rem;
+    @include breakpoints($tablet) {
+        display: block;
+    }
 }

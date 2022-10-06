@@ -35,12 +35,11 @@ const TracksList = () => {
     useEffect(() => {
         if(user) {
             dispatch(fetchFavorites());
-            console.log(1);
         }
     }, [user, dispatch]);
 
     return (
-        <div className="tracks" style={{marginLeft: user ? '32rem' : '0'}} >
+        <div className="tracks" >
             {
                 tracksEl
             }

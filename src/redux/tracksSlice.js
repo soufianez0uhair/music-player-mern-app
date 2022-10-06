@@ -30,7 +30,6 @@ export const fetchFavorites = createAsyncThunk('tracks/fetchFavorites', async (t
             }
         });
 
-        console.log(response.data.data.favTracks);
         return response.data.data.favTracks;
     } catch(err) {
         if(!err.response) {
@@ -112,7 +111,6 @@ const tracksSlice = createSlice({
             })
             .addCase(fetchFavorites.pending, (state) => {
                 state.favoritesStatus = 'loading';
-                console.log(2);
             })
             .addCase(fetchFavorites.fulfilled, (state,action) => {
                 state.favoritesStatus = 'succeeded';

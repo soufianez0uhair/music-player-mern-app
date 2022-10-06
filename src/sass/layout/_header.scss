@@ -4,6 +4,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    @include breakpoints($tablet) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
     &__link {
         font-weight: 500;
         font-size: 1.5rem;
@@ -11,6 +15,9 @@
         background: $purpleNavy;
         padding: .5rem 1.5rem;
         margin-left: 1rem;
+        @include breakpoints($mobile) {
+            font-size: 1.2rem;
+        }
         &:hover {
             background: #fff;
             color: $purpleNavy;
@@ -30,6 +37,9 @@
     align-items: center;
     justify-content: center;
     width: 40rem;
+    @include breakpoints($mobile) {
+        width: 30rem;
+    }
     &__input {
         margin-left: -2.5rem;
         padding: 1rem 3rem;
@@ -42,5 +52,12 @@
         &:focus {
             width: 100%;
         }
+    }
+}
+
+.mobile {
+    display: none;
+    @include breakpoints($tablet) {
+        display: inline-block;
     }
 }
