@@ -1,0 +1,36 @@
+.track {
+    position: relative;
+    width: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.274);
+    box-shadow: .5rem 1rem 2rem rgba(0,0,0,.1);
+    &:hover {
+        .icon--play {
+            right: 40%;
+        }
+        .icon--star {
+            left: 40%;
+        }
+    }
+    &__details {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    &__title {
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    &__img-box {
+        overflow: hidden;
+    }
+    &__cover {
+        transition: all .2s ease-in;
+        &:hover {
+            transform: scale(1.1);
+            opacity: .8;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.header {
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    &__link {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #fff;
+        background: $purpleNavy;
+        padding: .5rem 1.5rem;
+        margin-left: 1rem;
+        &:hover {
+            background: #fff;
+            color: $purpleNavy;
+            cursor: pointer;
+        }
+    }
+    &__name {
+        font-size: 1.5rem;
+    }
+    .logo {
+        width: 5rem;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    &__input {
+        margin-left: -2.5rem;
+        padding: 1rem 3rem;
+        font-size: 1.3rem;
+        width: 90%;
+        background: rgba(0, 0, 0, .7);
+        border-radius: 10rem;
+        color: #fff;
+        transition: width .2s  ease-in;
+        &:focus {
+            width: 100%;
+        }
+    }
+}

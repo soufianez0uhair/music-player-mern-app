@@ -1,0 +1,19 @@
+.audioPlayer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 5rem 30rem 1fr;
+    padding: .5rem 1rem;
+    background: #fff;
+    gap: 1rem;
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    &__track {
+        height: 5rem;
+    }
+}

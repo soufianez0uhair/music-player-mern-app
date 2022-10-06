@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+img {
+  width: 100%; }
+
+ul {
+  list-style: none; }
+
+input {
+  border: none;
+  outline: none; }
+
+button {
+  outline: none;
+  border: none; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+
+.track {
+  position: relative;
+  width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.274);
+  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.1); }
+  .track:hover .icon--play {
+    right: 40%; }
+  .track:hover .icon--star {
+    left: 40%; }
+  .track__details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; }
+  .track__title {
+    font-size: 1.4rem;
+    color: #fff; }
+  .track__img-box {
+    overflow: hidden; }
+  .track__cover {
+    transition: all .2s ease-in; }
+    .track__cover:hover {
+      transform: scale(1.1);
+      opacity: .8; }
+
+.bg {
+  background: linear-gradient(#E0B1CB, #231942);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-height: 100vh;
+  align-items: flex-start;
+  margin-left: 32rem; }
+
+.loader {
+  width: 30rem; }
+
+.icon {
+  font-size: 1.5rem; }
+  .icon--search {
+    z-index: 2; }
+  .icon--play, .icon--star {
+    font-size: 4.5rem;
+    color: #fff;
+    transition: all .2s ease-in; }
+  .icon--play {
+    position: absolute;
+    top: 20%;
+    right: -4.5rem; }
+  .icon--star {
+    position: absolute;
+    top: 40%;
+    left: -4.5rem; }
+  .icon--menu {
+    font-size: 2.5rem; }
+
+.audioPlayer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 5rem 30rem 1fr;
+  padding: .5rem 1rem;
+  background: #fff;
+  gap: 1rem; }
+  .audioPlayer__details {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; }
+  .audioPlayer__track {
+    height: 5rem; }
+
+.auth {
+  min-height: calc(100vh - 10rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  font-size: 1.3rem; }
+  .auth label {
+    color: #fff; }
+  .auth__input {
+    background: none;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 10rem;
+    padding: .5rem 1rem;
+    width: 25rem; }
+  .auth__error {
+    color: red; }
+
+.btn {
+  color: #fff;
+  background: #000;
+  border-radius: .3rem;
+  padding: .5rem; }
+  .btn:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer; }
+
+.header {
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .header__link {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #5E548E;
+    padding: .5rem 1.5rem;
+    margin-left: 1rem; }
+    .header__link:hover {
+      background: #fff;
+      color: #5E548E;
+      cursor: pointer; }
+  .header__name {
+    font-size: 1.5rem; }
+  .header .logo {
+    width: 5rem; }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem; }
+  .search__input {
+    margin-left: -2.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10rem;
+    color: #fff;
+    transition: width .2s  ease-in; }
+    .search__input:focus {
+      width: 100%; }
+
+.pages {
+  display: flex;
+  padding: 0 2rem;
+  gap: 1.5rem; }
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  width: 25rem;
+  background: #fff;
+  height: calc(100vh - 8rem);
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: 300;
+  color: #231942; }
+  .menu h1 {
+    font-weight: 300;
+    font-size: 3rem; }
+  .menu__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  .menu__link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6d6c6c;
+    transition: all .2s ease-in; }
+    .menu__link:hover {
+      color: #231942;
+      margin-left: 2rem;
+      cursor: pointer; }

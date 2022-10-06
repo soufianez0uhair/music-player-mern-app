@@ -1,0 +1,38 @@
+.menu {
+    position: fixed;
+    bottom: 0;
+    width: 25rem;
+    background: #fff;
+    height: calc(100vh - 8rem);
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-weight: 300;
+    color: $russianViolet;
+    h1 {
+        font-weight: 300;
+        font-size: 3rem;
+    }
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: rgb(109, 108, 108);
+        transition: all .2s ease-in;
+        &:hover {
+            color: $russianViolet;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+    }
+}
